@@ -12,7 +12,6 @@ const fetchChampionData = async (name: string) => {
 };
 
 const ChampionDetailPage = ({ params }: { params: { name: string } }) => {
-    // Unwrap `params` and fetch champion data
     const champion = use(fetchChampionData(params.name));
 
     return (
