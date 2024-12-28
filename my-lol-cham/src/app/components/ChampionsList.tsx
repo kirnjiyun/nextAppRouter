@@ -3,7 +3,6 @@
 
 import Link from "next/link";
 import styles from "../../styles/championsList.module.css";
-// (원치 않으면 인라인 스타일만 사용 가능)
 
 interface ChampionJson {
     data: {
@@ -14,7 +13,7 @@ interface ChampionJson {
 interface ChampionData {
     id: string;
     key: string;
-    name: string; // "아리", "아트록스" 등 한글 이름
+    name: string;
     title: string;
     image: {
         full: string;
@@ -26,18 +25,16 @@ interface ChampionData {
 }
 
 interface ChampionsListProps {
-    championData: ChampionJson; // 서버에서 넘어온 전체 챔피언 데이터
-    searchText: string; // 필터에 사용할 검색어
+    championData: ChampionJson;
+    searchText: string;
 }
 
 export default function ChampionsList({
     championData,
     searchText,
 }: ChampionsListProps) {
-    // 모든 챔피언 키 ex) "Aatrox", "Ahri", ...
     const champKeys = Object.keys(championData.data);
 
-    // 이름으로 필터
     const filteredKeys = champKeys.filter((key) => {
         const champ = championData.data[key];
         return champ.name.toLowerCase().includes(searchText.toLowerCase());

@@ -1,0 +1,75 @@
+/* styles/layout.module.css */
+
+/* font 변수로 설정한 부분은 따로 없고, 여기서는 레이아웃만 스타일링 */
+
+/* 루트 body 스타일 */
+.bodyWrap {
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 헤더 스타일 */
+.header {
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    padding: 0.5rem 1rem;
+}
+
+.headerNav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+
+/* 브랜드 링크(왼쪽) */
+.brandLink {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.25rem;
+    color: #333;
+}
+
+/* 메인 컨테이너 */
+.main {
+    flex: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 1rem;
+}
+
+/* 푸터 */
+.footer {
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+    padding: 0.5rem 1rem;
+}
+
+.footerInner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+}
+
+/* 깃허브 링크 */
+.githubLink {
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.footerText {
+    color: #666;
+}

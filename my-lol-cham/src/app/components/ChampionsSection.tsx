@@ -24,7 +24,6 @@ interface ChampionData {
     partype: string;
 }
 
-// 동일 구조!
 export default function ChampionsSection({
     championData,
 }: {
