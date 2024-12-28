@@ -33,6 +33,11 @@ export default function ChampionsList({
     championData,
     searchText,
 }: ChampionsListProps) {
+    if (!championData || !championData.data) {
+        return <div>Loading champions...</div>; // 로딩 상태 표시
+    }
+
+    // 챔피언 데이터 키 추출
     const champKeys = Object.keys(championData.data);
 
     const filteredKeys = champKeys.filter((key) => {

@@ -20,7 +20,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-    title: "League of Legends 챔피언",
+    title: "롤 챔피언",
     description: "롤 챔피언 검색하는 사이트",
 };
 
