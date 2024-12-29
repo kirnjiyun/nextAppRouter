@@ -2,15 +2,21 @@
 
 import { useState } from "react";
 import styles from "./ChampionDetail.module.css";
-
+import { useRouter } from "next/navigation";
 export default function ChampionDetail({ champion }: { champion: any }) {
     const [showAttributes, setShowAttributes] = useState(false);
     const [showStats, setShowStats] = useState(false);
-
+    const router = useRouter();
     const championImg = `https://ddragon.leagueoflegends.com/cdn/10.6.1/img/champion/${champion.image.full}`;
 
     return (
         <main className={styles.main}>
+            <button
+                className={styles.backButton}
+                onClick={() => router.push("/")}
+            >
+                <span className={styles.backIcon}>&larr;</span>
+            </button>
             <div className={styles.header}>
                 <img
                     src={championImg}
@@ -23,7 +29,6 @@ export default function ChampionDetail({ champion }: { champion: any }) {
                 </div>
             </div>
             <p className={styles.blurb}>{champion.blurb}</p>
-
             {/* Attributes Section */}
             <div
                 className={styles.toggleSection}
@@ -54,7 +59,6 @@ export default function ChampionDetail({ champion }: { champion: any }) {
                     </ul>
                 )}
             </div>
-
             {/* Stats Section */}
             <div
                 className={styles.toggleSection}

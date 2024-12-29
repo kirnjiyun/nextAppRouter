@@ -36,3 +36,16 @@
     width: 100%;
     opacity: 1;
 }
+@font-face {
+    font-family: "LOTTERIADDAG";
+    src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/LOTTERIADDAG.woff2")
+        format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* HTML 전체에 기본 폰트 적용 */
+
+.title {
+    font-family: "LOTTERIADDAG", Arial, sans-serif; /* LOTTERIADDAG를 기본으로 설정 */
+}
